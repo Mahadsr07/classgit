@@ -9,10 +9,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(
-    'mongodb://127.0.0.1:27017/jwtDB'
-)
-.then(() => console.log('MongoDB Connected'))
+mongoose.connect('mongodb+srv://mahadsardar07:mahadsr07@cluster0.0zwslp7.mongodb.net/?appName=Cluster0')
+.then(() => console.log('MongoDB Connected')) 
 .catch(err => console.log(err));
 
 app.use('/auth', AuthRouter);
